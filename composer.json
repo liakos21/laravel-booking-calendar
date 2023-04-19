@@ -1,0 +1,52 @@
+{
+    "name": "liakos21/laravel-booking-calendar",
+    "description": "Implements a booking calendar in Laravel applications to display availability and allow users to schedule appointments or reservations.",
+    "keywords": [
+    ],
+    "homepage": "https://github.com/liakos21/laravel-booking-calendar",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ilias Loulakakis",
+            "email": "iloulakakis@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Test\\Test\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Test\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Test\\Test\\TestServiceProvider"
+            ],
+            "aliases": {
+                "Test": "Test\\Test\\TestFacade"
+            }
+        }
+    }
+}
